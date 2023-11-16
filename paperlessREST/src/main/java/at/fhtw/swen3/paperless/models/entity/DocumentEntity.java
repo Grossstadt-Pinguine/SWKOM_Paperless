@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Data
 @Getter
 @Setter
 @Builder
@@ -17,11 +18,12 @@ public class DocumentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     private Integer correspondent;
 
     private Integer documentType;
 
-    private Integer storagePath;
+    //private Integer storagePath;
 
     private String title;
 
@@ -36,6 +38,7 @@ public class DocumentEntity {
 
     private String createdDate;
 
+    /*
     private String modified;
 
     private String added;
@@ -47,4 +50,5 @@ public class DocumentEntity {
     private String archivedFileName;
 
     private Integer owner;
+    */
 }

@@ -27,5 +27,4 @@ public class DocumentMapperTests {
         assertEquals(documentEntity.getContent(), result.getContent());
 
     }
-
 }
