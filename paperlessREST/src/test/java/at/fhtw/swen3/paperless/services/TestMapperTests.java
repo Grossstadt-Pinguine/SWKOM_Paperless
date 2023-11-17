@@ -1,14 +1,12 @@
 package at.fhtw.swen3.paperless.services;
 
-import at.fhtw.swen3.paperless.models.entity.DocumentEntity;
 import at.fhtw.swen3.paperless.models.entity.TestEntity;
 import at.fhtw.swen3.paperless.services.mapper.TestMapper;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
+//@SpringBootTest
 public class TestMapperTests {
     @Test
     void EntityToDtoMapping() {
