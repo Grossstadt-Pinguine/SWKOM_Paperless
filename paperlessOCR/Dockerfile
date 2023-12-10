@@ -26,9 +26,14 @@ RUN $JAVA_HOME/bin/jlink \
 # main app image
 # this is the ocr image with the most pulls, so... it's good?
 # https://hub.docker.com/r/jitesoft/tesseract-ocr
-FROM jitesoft/tesseract-ocr:alpine
+#FROM jitesoft/tesseract-ocr:alpine
+FROM alpine:3.14
 ENV JAVA_HOME=/jre
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
+
+RUN apk --no-cache update
+RUN apk --no-cache add ghostscript
+RUN apk --no-cache add tesseract-ocr tesseract-ocr-dev
 
 COPY --from=temurin /customjre $JAVA_HOME
 COPY --from=temurin ./target/paperlessOCR-1.0-SNAPSHOT.jar ./
